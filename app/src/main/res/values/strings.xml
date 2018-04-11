@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ClubMoy</string>
+    <string name="enter_email_address_register">Enter Email Address</string>
+    <string name="enter_password_register">Enter Password</string>
+    <string name="register">Register</string>
+    <string name="already_signed_up_sign_in_here">Already signed up? Sign in here</string>
+    <string name="enter_email_address_login">Enter Email Address</string>
+    <string name="enter_password_login">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="havent_an_account_sign_up_here">Already signed up? Sign in here</string>
+    <string name="title_activity_training">Training</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

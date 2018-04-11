@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "9020795551",
+    "firebase_url": "https://clubmoy-dee60.firebaseio.com",
+    "project_id": "clubmoy-dee60",
+    "storage_bucket": "clubmoy-dee60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9020795551:android:f73bc6ef6e5ec05b",
+        "android_client_info": {
+          "package_name": "com.example.declan.clubmoy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9020795551-3je720loiuml3u1p1r6hlpqsgp04tgk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.declan.clubmoy",
+            "certificate_hash": "572dcf9c10984c19c67e2573bb4a14995e92f887"
+          }
+        },
+        {
+          "client_id": "9020795551-n5coobqirpnqsuoi1d5h95vc9p5l40ok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSZFfwTKTjB71POz0yi3B9oXtHGwhVmcs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9020795551-n5coobqirpnqsuoi1d5h95vc9p5l40ok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
