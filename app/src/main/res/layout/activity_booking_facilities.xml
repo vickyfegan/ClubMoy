@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingFacilities">
+
+    <EditText
+        android:id="@+id/nameFacilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="81dp"
+        android:ems="10"
+        android:hint="@string/facilitiesName"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/facilitiesOptions"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/nameFacilities"
+        android:entries="@array/facilitiesOptions" />
+
+    <EditText
+        android:id="@+id/facilitiesDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/facilitiesOptions"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/dd_mm_yyyy"/>
+
+    <EditText
+        android:id="@+id/facilitiesTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/facilitiesDate"
+        android:ems="10"
+        android:hint="@string/hh_mm"
+        android:inputType="" />
+
+    <Button
+        android:id="@+id/bookFacilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="204dp"
+        android:text="@string/bookFacilities" />
+</RelativeLayout>

@@ -1,16 +1,14 @@
-package com.example.declan.clubmoy;
+package com.example.declan.clubmoy.YoutubePage;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
+import com.example.declan.clubmoy.R;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.google.android.youtube.player.YouTubeThumbnailView;
 
 //https://www.youtube.com/watch?v=aJ7BoNG-r2c
 //https://www.youtube.com/watch?v=3LiubyYpEUk
