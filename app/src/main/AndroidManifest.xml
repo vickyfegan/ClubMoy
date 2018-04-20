@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Notifications.MainActivity">
+
+        <activity android:name=".Authentication.Registration">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,30 +27,31 @@
 
         <service android:name=".Notifications.MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"></action>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity android:name=".Homepage" />
         <activity android:name=".Authentication.Login" />
-        <activity android:name=".Calendar" />
+        <activity android:name=".Booking.Calendar" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".YoutubePage.YoutubeVideo" />
-        <activity android:name=".Authentication.Registration" />
         <activity android:name=".FirebaseSearchFacilities" />
-        <activity android:name=".BookingFacilities" />
+        <activity android:name=".Booking.BookingFacilities" />
 
         <service
             android:name=".Notifications.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT">
-                </action>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name=".Payments.Paypal"></activity>
+        <activity android:name=".Payments.PaymentDetails"></activity>
     </application>
 
 </manifest>

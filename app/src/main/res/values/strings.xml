@@ -30,6 +30,12 @@
     <string name="dSearch">28-05-2018</string>
     <string name="facSearch">Gym</string>
     <string name="tSearch">18:45</string>
+    <string name="membershp_amount">Membershp Amount</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="enter_amount_00_00">Enter Amount £00.00</string>
+    <string name="txtId">TextView</string>
+    <string name="textAmount">TextView</string>
+    <string name="txtStatus">TextView</string>
 
     <array name="facilitiesOptions">
         <item>Gym</item>

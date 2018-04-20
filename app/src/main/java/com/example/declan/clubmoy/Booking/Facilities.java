@@ -1,4 +1,4 @@
-package com.example.declan.clubmoy;
+package com.example.declan.clubmoy.Booking;
 
 public class Facilities {
 
