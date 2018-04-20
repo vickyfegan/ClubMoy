@@ -37,16 +37,13 @@
 
         <activity android:name=".Homepage" />
         <activity android:name=".Authentication.Login" />
-        <activity
-            android:name=".Navigation"
-            android:label="@string/title_activity_training"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Calendar" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".YoutubePage.YoutubeVideo" />
-        <activity android:name=".Authentication.Registration"></activity>
+        <activity android:name=".Authentication.Registration" />
+        <activity android:name=".FirebaseSearchFacilities"></activity>
     </application>
 
 </manifest>

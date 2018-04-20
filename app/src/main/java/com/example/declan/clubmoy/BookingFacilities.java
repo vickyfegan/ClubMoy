@@ -1,5 +1,6 @@
 package com.example.declan.clubmoy;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,57 +13,60 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+//https://www.youtube.com/watch?v=aCDgP2By1J0
+
 public class BookingFacilities extends AppCompatActivity {
 
-    EditText nameFacilities, facilitiesDate, facilitiesTime;
-    Spinner facilitiesOptions;
-    Button bookFacilities;
+    private EditText fName, fDate, fTime;
+    private Spinner facOptions;
+    private Button bookFac;
+    private ProgressDialog progressDialog;
 
-    DatabaseReference databaseFacilities;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_facilities);
 
-        databaseFacilities = FirebaseDatabase.getInstance().getReference("facilities");
+        fName = (EditText) findViewById(R.id.fName);
+        fDate = (EditText) findViewById(R.id.fDate);
+        fTime = (EditText) findViewById(R.id.fTime);
+        facOptions = (Spinner) findViewById(R.id.facOptions);
+        bookFac = (Button) findViewById(R.id.bookFac);
 
-        nameFacilities = (EditText) findViewById(R.id.nameFacilities);
-        facilitiesDate = (EditText) findViewById(R.id.facilitiesDate);
-        facilitiesTime = (EditText) findViewById(R.id.facilitiesTime);
-        facilitiesOptions = (Spinner) findViewById(R.id.facilitiesOptions);
-        bookFacilities = (Button) findViewById(R.id.bookFacilities);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Saving your Booking...");
 
-        bookFacilities.setOnClickListener(new View.OnClickListener() {
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Facilities");
+
+        bookFac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    bookFacility();
+
+                AddData();
+
             }
         });
 
     }
 
-    private void bookFacility()
+    public void AddData()
     {
-        String name = nameFacilities.getText().toString().trim();
-        String facilities = facilitiesOptions.getSelectedItem().toString();
-        String date = facilitiesDate.getText().toString().trim();
-        String time = facilitiesTime.getText().toString().trim();
+        String Name = fName.getText().toString().trim();
+        String Date = fDate.getText().toString().trim();
+        String Time = fTime.getText().toString().trim();
+        String Options = facOptions.getSelectedItem().toString();
 
-        if(!TextUtils.isEmpty(name))
-        {
-            String id = databaseFacilities.push().getKey();
+        progressDialog.show();
 
-            Facility facility = new Facility(id, name, facilities, date, time);
+        SaveData saveData = new SaveData(Name, Date, Time, Options);
 
-            databaseFacilities.child(id).setValue(facility);
 
-            Toast.makeText(this, "Booking Confirmed", Toast.LENGTH_SHORT).show();
-        }
-
-        else
-        {
-            Toast.makeText(this, "Enter name", Toast.LENGTH_SHORT).show();
-        }
+        databaseReference.push().setValue(saveData);
+        progressDialog.dismiss();
+        Toast.makeText(getApplication(), "Booking Confirmed", Toast.LENGTH_LONG).show();
     }
+
+
 }

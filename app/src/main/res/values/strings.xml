@@ -24,7 +24,9 @@
     <string name="dd_mm_yyyy">DD-MM-YYYY</string>
     <string name="hh_mm">HH:MM</string>
     <string name="facilitiesName">Enter Name</string>
-    
+    <string name="search">Name</string>
+    <string name="search_bookings">Search Bookings</string>
+
     <array name="facilitiesOptions">
         <item>Gym</item>
         <item>Training Pitch</item>

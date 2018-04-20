@@ -7,7 +7,7 @@
     tools:context=".BookingFacilities">
 
     <EditText
-        android:id="@+id/nameFacilities"
+        android:id="@+id/fName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -19,38 +19,38 @@
         android:inputType="textPersonName" />
 
     <Spinner
-        android:id="@+id/facilitiesOptions"
+        android:id="@+id/facOptions"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/nameFacilities"
+        android:layout_below="@+id/fName"
         android:entries="@array/facilitiesOptions" />
 
     <EditText
-        android:id="@+id/facilitiesDate"
+        android:id="@+id/fDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/facilitiesOptions"
+        android:layout_below="@+id/facOptions"
         android:ems="10"
         android:inputType="date"
         android:hint="@string/dd_mm_yyyy"/>
 
     <EditText
-        android:id="@+id/facilitiesTime"
+        android:id="@+id/fTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/facilitiesDate"
+        android:layout_below="@+id/fDate"
         android:ems="10"
         android:hint="@string/hh_mm"
         android:inputType="" />
 
     <Button
-        android:id="@+id/bookFacilities"
+        android:id="@+id/bookFac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
