@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Sponsors">
+
+
+    <ImageView
+        android:id="@+id/macavoySponsor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/macavoy"
+        app:srcCompat="@drawable/macavoy" />
+
+    <ImageView
+        android:id="@+id/seanSponsor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/macavoySponsor"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:contentDescription="@string/seancavco"
+        app:srcCompat="@drawable/seancavco" />
+
+    <ImageView
+        android:id="@+id/moymSponsor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/macavoySponsor"
+        android:layout_alignLeft="@+id/macavoySponsor"
+        android:layout_below="@+id/macavoySponsor"
+        android:contentDescription="@string/moywaymotors"
+        app:srcCompat="@drawable/moywaymotors" />
+
+    <ImageView
+        android:id="@+id/lynasSponsor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/seanSponsor"
+        android:layout_alignLeft="@+id/seanSponsor"
+        android:layout_below="@+id/macavoySponsor"
+        android:contentDescription="@string/lynas"
+        app:srcCompat="@drawable/lynas" />
+
+    <ImageView
+        android:id="@+id/moyaSponsor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/seanSponsor"
+        android:layout_alignLeft="@+id/seanSponsor"
+        android:layout_below="@+id/moymSponsor"
+        android:contentDescription="@string/moyauto"
+        app:srcCompat="@drawable/moyauto" />
+
+    <ImageView
+        android:id="@+id/westlandSponsor"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/macavoySponsor"
+        android:layout_alignLeft="@+id/macavoySponsor"
+        android:layout_below="@+id/moymSponsor"
+        android:contentDescription="@string/westland"
+        app:srcCompat="@drawable/westland" />
+
+
+</RelativeLayout>
