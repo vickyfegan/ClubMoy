@@ -22,7 +22,7 @@
         android:inputType="textPersonName" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/searchButton"
         android:layout_width="43dp"
         android:layout_height="49dp"
         android:layout_alignParentEnd="true"
@@ -32,4 +32,12 @@
         android:layout_marginRight="52dp"
         android:contentDescription="@string/search"
         app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/results"
+        android:layout_width="304dp"
+        android:layout_height="363dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/search"
+        android:layout_marginTop="131dp" />
 </RelativeLayout>

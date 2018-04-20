@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookingFacilities">
+        <activity android:name=".Notifications.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +24,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".Notifications.Notifications">
+        <service android:name=".Notifications.MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name=".Notifications.MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"></action>
             </intent-filter>
         </service>
 
@@ -43,7 +38,18 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".YoutubePage.YoutubeVideo" />
         <activity android:name=".Authentication.Registration" />
-        <activity android:name=".FirebaseSearchFacilities"></activity>
+        <activity android:name=".FirebaseSearchFacilities" />
+        <activity android:name=".BookingFacilities" />
+
+        <service
+            android:name=".Notifications.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT">
+                </action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

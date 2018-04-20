@@ -26,6 +26,10 @@
     <string name="facilitiesName">Enter Name</string>
     <string name="search">Name</string>
     <string name="search_bookings">Search Bookings</string>
+    <string name="nSearch">Declan Conroy</string>
+    <string name="dSearch">28-05-2018</string>
+    <string name="facSearch">Gym</string>
+    <string name="tSearch">18:45</string>
 
     <array name="facilitiesOptions">
         <item>Gym</item>

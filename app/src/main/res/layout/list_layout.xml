@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/nSearch" />
+
+    <TextView
+        android:id="@+id/dateSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nSearch"
+        android:layout_marginTop="56dp"
+        android:text="@string/dSearch" />
+
+    <TextView
+        android:id="@+id/facSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nSearch"
+        android:layout_marginTop="90dp"
+        android:text="@string/facSearch" />
+
+    <TextView
+        android:id="@+id/timeSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nSearch"
+        android:layout_marginTop="122dp"
+        android:text="@string/tSearch" />
+</RelativeLayout>
