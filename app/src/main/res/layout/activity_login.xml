@@ -11,7 +11,9 @@
         android:id="@+id/signInEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="195dp"
         android:ems="10"
         android:hint="@string/enter_email_address_register"
         android:inputType="textEmailAddress" />
@@ -20,8 +22,9 @@
         android:id="@+id/signInPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signInEmail"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
         android:ems="10"
         android:hint="@string/enter_password_login"
         android:inputType="textPassword" />
@@ -32,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="98dp"
+        android:layout_marginBottom="83dp"
         android:text="@string/login2" />
 
     <TextView
@@ -43,5 +46,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp"
         android:text="@string/not_have_an_account_sign_up_here" />
+
+    <ImageView
+        android:id="@+id/moyLogin"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:contentDescription="@string/moylogin"
+        app:srcCompat="@drawable/crest" />
 
 </RelativeLayout>

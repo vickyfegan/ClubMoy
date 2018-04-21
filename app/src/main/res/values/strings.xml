@@ -42,6 +42,9 @@
     <string name="lynas">lynas</string>
     <string name="moyauto">moyauto</string>
     <string name="westland">westland</string>
+    <string name="imageview">imageView</string>
+    <string name="moyRegistration">crest</string>
+    <string name="moylogin">moyLogin</string>
 
     <array name="facilitiesOptions">
         <item>Gym</item>
