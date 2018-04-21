@@ -45,6 +45,12 @@
     <string name="imageview">imageView</string>
     <string name="moyRegistration">crest</string>
     <string name="moylogin">moyLogin</string>
+    <string name="booking">booking</string>
+    <string name="money">money</string>
+    <string name="calendar">calendar</string>
+    <string name="location">location</string>
+    <string name="logout">logout</string>
+    <string name="football">football</string>
 
     <array name="facilitiesOptions">
         <item>Gym</item>
