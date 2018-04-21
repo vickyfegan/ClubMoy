@@ -1,10 +1,17 @@
 package com.example.declan.clubmoy.YoutubePage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import com.example.declan.clubmoy.Booking.BookingFacilities;
+import com.example.declan.clubmoy.Booking.Calendar;
+import com.example.declan.clubmoy.Homepage;
+import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
+import com.example.declan.clubmoy.Sponsors;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -16,6 +23,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YoutubeVideo extends YouTubeBaseActivity
 {
 
+    ImageView homePage, moneyImage, bookingFacImage, sponsorToolbar, youtubeToolbar, footballToolbar, calendarToolbar, logoutToolbar;
     YouTubePlayerView youTubePlayerView;
     Button button;
     YouTubePlayer.OnInitializedListener onInitializedListener;
@@ -46,6 +54,76 @@ public class YoutubeVideo extends YouTubeBaseActivity
                 youTubePlayerView.initialize(PlayerConfig.API_KEY,onInitializedListener);
             }
         });
+
+        homePage = (ImageView) findViewById(R.id.homePage);
+        moneyImage = (ImageView) findViewById(R.id.moneyImage);
+        bookingFacImage = (ImageView) findViewById(R.id.bookingFacImage);
+        sponsorToolbar = (ImageView) findViewById(R.id.sponsorToolbar);
+        youtubeToolbar = (ImageView) findViewById(R.id.youtubeToolbar);
+        footballToolbar = (ImageView) findViewById(R.id.footballToolbar);
+        calendarToolbar = (ImageView) findViewById(R.id.calendarToolbar);
+        logoutToolbar = (ImageView) findViewById(R.id.logoutToolbar);
+
+        homePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoutubeVideo.this, Homepage.class);
+                startActivity(i);
+            }
+        });
+
+        moneyImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoutubeVideo.this, Paypal.class);
+                startActivity(i);
+            }
+        });
+        bookingFacImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoutubeVideo.this, BookingFacilities.class);
+                startActivity(i);
+            }
+        });
+
+        sponsorToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoutubeVideo.this, Sponsors.class);
+                startActivity(i);
+            }
+        });
+
+        youtubeToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoutubeVideo.this, YoutubeVideo.class);
+                startActivity(i);
+            }
+        });
+       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Youtube.this, Training.class);
+                startActivity(i);
+            }
+        });*/
+        calendarToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoutubeVideo.this, Calendar.class);
+                startActivity(i);
+            }
+        });
+       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Youtube.this, Logout.class);
+                startActivity(i);
+            }
+        });*/
+
 
 
 

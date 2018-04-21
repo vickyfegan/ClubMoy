@@ -7,9 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.declan.clubmoy.Booking.BookingFacilities;
+import com.example.declan.clubmoy.Booking.Calendar;
+import com.example.declan.clubmoy.Payments.Paypal;
+import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
+
 public class Sponsors extends AppCompatActivity {
 
     ImageView macavoySponsor, seanSponsor, moymSponsor, moyaSponsor, lynasSponsor, westlandSponsor;
+    ImageView homePage, moneyImage, bookingFacImage, sponsorToolbar, youtubeToolbar, footballToolbar, calendarToolbar, logoutToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +107,74 @@ public class Sponsors extends AppCompatActivity {
             }
         });
 
+        homePage = (ImageView) findViewById(R.id.homePage);
+        moneyImage = (ImageView) findViewById(R.id.moneyImage);
+        bookingFacImage = (ImageView) findViewById(R.id.bookingFacImage);
+        sponsorToolbar = (ImageView) findViewById(R.id.sponsorToolbar);
+        youtubeToolbar = (ImageView) findViewById(R.id.youtubeToolbar);
+        footballToolbar = (ImageView) findViewById(R.id.footballToolbar);
+        calendarToolbar = (ImageView) findViewById(R.id.calendarToolbar);
+        logoutToolbar = (ImageView) findViewById(R.id.logoutToolbar);
 
+        homePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, Homepage.class);
+                startActivity(i);
+            }
+        });
+
+        moneyImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, Paypal.class);
+                startActivity(i);
+            }
+        });
+        bookingFacImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, BookingFacilities.class);
+                startActivity(i);
+            }
+        });
+
+        sponsorToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, Sponsors.class);
+                startActivity(i);
+            }
+        });
+
+        youtubeToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, YoutubeVideo.class);
+                startActivity(i);
+            }
+        });
+       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, Training.class);
+                startActivity(i);
+            }
+        });*/
+        calendarToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, Calendar.class);
+                startActivity(i);
+            }
+        });
+       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Sponsors.this, Logout.class);
+                startActivity(i);
+            }
+        });*/
 
 
     }

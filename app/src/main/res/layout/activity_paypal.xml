@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Payments.Paypal">
@@ -11,18 +12,16 @@
         android:id="@+id/membershipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="175dp"
+        android:layout_centerInParent="true"
         android:text="@string/membershp_amount" />
 
     <EditText
         android:id="@+id/edtAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="211dp"
+        android:layout_marginBottom="187dp"
         android:ems="10"
         android:hint="@string/enter_amount_00_00"
         android:inputType="textPersonName" />
@@ -33,6 +32,129 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="121dp"
         android:text="@string/pay_now" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bookingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#fdfdfd"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/homePage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/homepageTb"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/moneyImage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:contentDescription="@string/moneyTb"
+        app:srcCompat="@drawable/membership" />
+
+    <ImageView
+        android:id="@+id/bookingFacImage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:srcCompat="@drawable/booking"
+        android:contentDescription="@string/todo11" />
+
+    <ImageView
+        android:id="@+id/sponsorToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:contentDescription="@string/sponsortoolbar"
+        app:srcCompat="@drawable/sponsoredby" />
+
+    <ImageView
+        android:id="@+id/youtubeToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="149dp"
+        android:contentDescription="@string/youtubetoolbar"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/footballToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="99dp"
+        android:contentDescription="@string/footballtoolbar"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/logoutToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/logouttoolbar"
+        app:srcCompat="@drawable/logout" />
+
+    <ImageView
+        android:id="@+id/calendarToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="@string/calendartoolbar"
+        app:srcCompat="@drawable/calendar" />
+
+    <ImageView
+        android:id="@+id/facCrestImage"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-99dp"
+        android:layout_marginTop="113dp"
+        android:layout_toEndOf="@+id/footballToolbar"
+        app:srcCompat="@drawable/crest"
+        android:contentDescription="@string/todo12" />
+
+    <TextView
+        android:id="@+id/paypalTitle"
+        android:layout_width="wrap_content"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookingToolbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pay_yearly_membership" />
+
+    <TextView
+        android:id="@+id/paypalInfo"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/moneyImage"
+        android:layout_marginTop="123dp"
+        android:text="@string/please_use_the_below_form_to_pay_your_membership_for_2018_the_amount_is_25_00" />
 </RelativeLayout>

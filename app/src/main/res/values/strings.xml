@@ -51,6 +51,31 @@
     <string name="location">location</string>
     <string name="logout">logout</string>
     <string name="football">football</string>
+    <string name="homepageTb">homepage</string>
+    <string name="moneyTb">moneyPage</string>
+    <string name="sponsortoolbar">sponsorToolbar</string>
+    <string name="youtubetoolbar">youtubetoolbar</string>
+    <string name="footballtoolbar">footballToolbar</string>
+    <string name="calendartoolbar">calendarToolbar</string>
+    <string name="logouttoolbar">logoutToolbar</string>
+    <string name="pay_membership">Pay Membership</string>
+    <string name="calendarHp">Calendar</string>
+    <string name="training_match_fixtures">Training/Match FIxtures</string>
+    <string name="sponsorsHp">sponsors</string>
+    <string name="facilities_booking">Facilities Booking</string>
+    <string name="sponsorIcon">Sponsor</string>
+    <string name="a_year_of_champions">A year of Champions</string>
+    <string name="lgot">Logout</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="pay_yearly_membership">Pay Yearly Membership</string>
+    <string name="todo11">TODO</string>
+    <string name="todo12">TODO</string>
+    <string name="all_ireland_champions_2018">All Ireland Champions 2018</string>
+    <string name="toDoD">TODO</string>
+    <string name="please_use_the_below_form_to_pay_your_membership_for_2018_the_amount_is_25_00">Please use the below Form to pay your membership for 2018. The amount is: £25.00</string>
+    <string name="sponsorsLogo">Sponsors</string>
+    <string name="calendarLogo">Calendar</string>
 
     <array name="facilitiesOptions">
         <item>Gym</item>

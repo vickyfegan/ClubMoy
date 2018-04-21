@@ -7,9 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.declan.clubmoy.Booking.BookingFacilities;
+import com.example.declan.clubmoy.Booking.Calendar;
+import com.example.declan.clubmoy.Homepage;
 import com.example.declan.clubmoy.R;
+import com.example.declan.clubmoy.Sponsors;
+import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
@@ -21,6 +27,9 @@ import org.json.JSONException;
 import java.math.BigDecimal;
 
 public class Paypal extends AppCompatActivity {
+
+    ImageView homePage, moneyImage, bookingFacImage, sponsorToolbar, youtubeToolbar, footballToolbar, calendarToolbar, logoutToolbar;
+
 
     public static final int PAYPAL_REQUEST_CODE = 7171;
 
@@ -46,6 +55,74 @@ public class Paypal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paypal);
+        homePage = (ImageView) findViewById(R.id.homePage);
+        moneyImage = (ImageView) findViewById(R.id.moneyImage);
+        bookingFacImage = (ImageView) findViewById(R.id.bookingFacImage);
+        sponsorToolbar = (ImageView) findViewById(R.id.sponsorToolbar);
+        youtubeToolbar = (ImageView) findViewById(R.id.youtubeToolbar);
+        footballToolbar = (ImageView) findViewById(R.id.footballToolbar);
+        calendarToolbar = (ImageView) findViewById(R.id.calendarToolbar);
+        logoutToolbar = (ImageView) findViewById(R.id.logoutToolbar);
+
+        homePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, Homepage.class);
+                startActivity(i);
+            }
+        });
+
+        moneyImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, Paypal.class);
+                startActivity(i);
+            }
+        });
+        bookingFacImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, BookingFacilities.class);
+                startActivity(i);
+            }
+        });
+
+        sponsorToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, Sponsors.class);
+                startActivity(i);
+            }
+        });
+
+        youtubeToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, YoutubeVideo.class);
+                startActivity(i);
+            }
+        });
+       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, Training.class);
+                startActivity(i);
+            }
+        });*/
+        calendarToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, Calendar.class);
+                startActivity(i);
+            }
+        });
+       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Paypal.this, Logout.class);
+                startActivity(i);
+            }
+        });*/
 
         //Start Paypal Service
 

@@ -33,9 +33,6 @@
         <activity android:name=".Homepage" />
         <activity android:name=".Authentication.Login" />
         <activity android:name=".Booking.Calendar" />
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
         <activity android:name=".YoutubePage.YoutubeVideo" />
         <activity android:name=".FirebaseSearchFacilities" />
         <activity android:name=".Booking.BookingFacilities" />

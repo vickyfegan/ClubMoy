@@ -24,10 +24,8 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="195dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="201dp"
+        android:layout_marginStart="17dp"
         android:contentDescription="@string/booking"
         app:srcCompat="@drawable/booking" />
 
@@ -37,7 +35,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/bookingImage"
-        android:layout_marginBottom="119dp"
+        android:layout_marginBottom="142dp"
         android:contentDescription="@string/money"
         app:srcCompat="@drawable/membership" />
 
@@ -47,28 +45,18 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/bookingImage"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="81dp"
         android:contentDescription="@string/calendar"
         app:srcCompat="@drawable/calendar" />
 
-    <ImageView
-        android:id="@+id/locationImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/bookingImage"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:contentDescription="@string/location"
-        app:srcCompat="@drawable/pointer" />
 
     <ImageView
         android:id="@+id/football"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignStart="@+id/locationImage"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/moneyImage"
+        android:layout_marginEnd="121dp"
         android:contentDescription="@string/football"
         app:srcCompat="@drawable/football" />
 
@@ -76,9 +64,8 @@
         android:id="@+id/logoutImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/football"
         android:layout_alignStart="@+id/football"
-        android:layout_alignTop="@+id/calendarImage"
+        android:layout_alignTop="@+id/youtubeImage"
         android:contentDescription="@string/logout"
         app:srcCompat="@drawable/logout" />
 
@@ -86,10 +73,11 @@
         android:id="@+id/bookingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/locationText"
+        android:layout_marginBottom="211dp"
         android:layout_marginStart="85dp"
-        android:text="Facilities Booking" />
+        android:text="@string/facilities_booking" />
 
     <TextView
         android:id="@+id/payMembership"
@@ -97,26 +85,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/bookingText"
-        android:layout_marginBottom="133dp"
-        android:text="Pay Membership" />
+        android:layout_marginBottom="155dp"
+        android:text="@string/pay_membership" />
 
     <TextView
         android:id="@+id/calendarText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/payMembership"
-        android:layout_marginBottom="61dp"
-        android:text="Calendar" />
-
-    <TextView
-        android:id="@+id/locationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/footballText"
-        android:layout_marginBottom="207dp"
-        android:text="Location" />
+        android:layout_alignStart="@+id/bookingText"
+        android:layout_marginBottom="100dp"
+        android:text="@string/calendarHp" />
 
     <TextView
         android:id="@+id/footballText"
@@ -124,13 +103,59 @@
         android:layout_height="42dp"
         android:layout_alignBottom="@+id/moneyImage"
         android:layout_alignParentEnd="true"
-        android:text="Training/Match FIxtures" />
+        android:text="@string/training_match_fixtures" />
 
     <TextView
         android:id="@+id/logoutText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/locationText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/footballText"
+        android:layout_marginBottom="43dp"
+        android:text="@string/lgot" />
+
+    <ImageView
+        android:id="@+id/youtubeImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/football"
+        android:layout_alignTop="@+id/bookingImage"
+        app:srcCompat="@drawable/youtube"
+        android:contentDescription="@string/todo1" />
+
+    <ImageView
+        android:id="@+id/sponsorImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/football"
+        android:layout_alignTop="@+id/calendarImage"
+        android:contentDescription="@string/sponsorsHp"
+        app:srcCompat="@drawable/sponsoredby" />
+
+    <TextView
+        android:id="@+id/sponsorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/footballText"
         android:layout_alignTop="@+id/calendarText"
-        android:text="Logout" />
+        android:text="@string/sponsorIcon" />
+
+    <TextView
+        android:id="@+id/champions"
+        android:layout_width="102dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/bookingText"
+        android:layout_marginTop="-19dp"
+        android:text="@string/a_year_of_champions" />
+
+    <ImageView
+        android:id="@+id/logoutHp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/football"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/logout"
+        android:contentDescription="@string/todo" />
 </RelativeLayout>

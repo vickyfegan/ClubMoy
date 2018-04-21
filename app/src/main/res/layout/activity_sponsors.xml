@@ -12,12 +12,9 @@
         android:id="@+id/macavoySponsor"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/sponsorToolbar"
+        android:layout_alignRight="@+id/sponsorToolbar"
+        android:layout_below="@+id/sponsorTitle"
         android:contentDescription="@string/macavoy"
         app:srcCompat="@drawable/macavoy" />
 
@@ -38,8 +35,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignStart="@+id/macavoySponsor"
-        android:layout_alignLeft="@+id/macavoySponsor"
-        android:layout_below="@+id/macavoySponsor"
+        android:layout_alignTop="@+id/lynasSponsor"
         android:contentDescription="@string/moywaymotors"
         app:srcCompat="@drawable/moywaymotors" />
 
@@ -47,9 +43,9 @@
         android:id="@+id/lynasSponsor"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/seanSponsor"
-        android:layout_alignLeft="@+id/seanSponsor"
-        android:layout_below="@+id/macavoySponsor"
+        android:layout_marginBottom="132dp"
         android:contentDescription="@string/lynas"
         app:srcCompat="@drawable/lynas" />
 
@@ -57,9 +53,8 @@
         android:id="@+id/moyaSponsor"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/seanSponsor"
-        android:layout_alignLeft="@+id/seanSponsor"
-        android:layout_below="@+id/moymSponsor"
         android:contentDescription="@string/moyauto"
         app:srcCompat="@drawable/moyauto" />
 
@@ -67,11 +62,114 @@
         android:id="@+id/westlandSponsor"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/macavoySponsor"
-        android:layout_alignLeft="@+id/macavoySponsor"
-        android:layout_below="@+id/moymSponsor"
         android:contentDescription="@string/westland"
         app:srcCompat="@drawable/westland" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bookingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#fdfdfd"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/homePage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/homepageTb"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/moneyImage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:contentDescription="@string/moneyTb"
+        app:srcCompat="@drawable/membership" />
+
+    <ImageView
+        android:id="@+id/bookingFacImage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:srcCompat="@drawable/booking"
+        android:contentDescription="@string/toDoD" />
+
+    <ImageView
+        android:id="@+id/sponsorToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:contentDescription="@string/sponsortoolbar"
+        app:srcCompat="@drawable/sponsoredby" />
+
+    <ImageView
+        android:id="@+id/youtubeToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="149dp"
+        android:contentDescription="@string/youtubetoolbar"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/footballToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="99dp"
+        android:contentDescription="@string/footballtoolbar"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/logoutToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/logouttoolbar"
+        app:srcCompat="@drawable/logout" />
+
+    <ImageView
+        android:id="@+id/calendarToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="@string/calendartoolbar"
+        app:srcCompat="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/sponsorTitle"
+        android:layout_width="wrap_content"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookingToolbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sponsorsLogo" />
 
 
 </RelativeLayout>

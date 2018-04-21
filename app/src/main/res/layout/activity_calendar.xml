@@ -11,7 +11,111 @@
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp" />
+        android:layout_marginBottom="65dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bookingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#fdfdfd"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/homePage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/homepageTb"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/moneyImage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:contentDescription="@string/moneyTb"
+        app:srcCompat="@drawable/membership" />
+
+    <ImageView
+        android:id="@+id/bookingFacImage"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:srcCompat="@drawable/booking"
+        android:contentDescription="@string/toDoD" />
+
+    <ImageView
+        android:id="@+id/sponsorToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:contentDescription="@string/sponsortoolbar"
+        app:srcCompat="@drawable/sponsoredby" />
+
+    <ImageView
+        android:id="@+id/youtubeToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="149dp"
+        android:contentDescription="@string/youtubetoolbar"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/footballToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="99dp"
+        android:contentDescription="@string/footballtoolbar"
+        app:srcCompat="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/logoutToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/logouttoolbar"
+        app:srcCompat="@drawable/logout" />
+
+    <ImageView
+        android:id="@+id/calendarToolbar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="@string/calendartoolbar"
+        app:srcCompat="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/calendarTitle"
+        android:layout_width="wrap_content"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookingToolbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/calendarLogo" />
 </RelativeLayout>

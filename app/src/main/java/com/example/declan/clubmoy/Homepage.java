@@ -11,11 +11,12 @@ import android.widget.ViewFlipper;
 import com.example.declan.clubmoy.Booking.BookingFacilities;
 import com.example.declan.clubmoy.Booking.Calendar;
 import com.example.declan.clubmoy.Payments.Paypal;
+import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 
 public class Homepage extends AppCompatActivity {
 
     ViewFlipper v_flipper;
-    ImageView bookingImage, moneyImage, calendarImage, locationImage, football, logoutImage;
+    ImageView bookingImage, moneyImage, calendarImage, football, logoutImage, youtubeImage, sponsorImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +26,10 @@ public class Homepage extends AppCompatActivity {
         bookingImage = (ImageView)findViewById(R.id.bookingImage);
         moneyImage = (ImageView)findViewById(R.id.moneyImage);
         calendarImage = (ImageView)findViewById(R.id.calendarImage);
-        locationImage = (ImageView)findViewById(R.id.locationImage);
         football = (ImageView)findViewById(R.id.football);
         logoutImage = (ImageView)findViewById(R.id.logoutImage);
+        youtubeImage = (ImageView)findViewById(R.id.youtubeImage);
+        sponsorImage = (ImageView)findViewById(R.id.sponsorImage);
 
         bookingImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,10 +55,18 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-        locationImage.setOnClickListener(new View.OnClickListener() {
+
+        youtubeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Homepage.this, MapsActivity.class);
+                Intent i = new Intent(Homepage.this, YoutubeVideo.class);
+                startActivity(i);
+            }
+        });
+        sponsorImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Homepage.this, Sponsors.class);
                 startActivity(i);
             }
         });
