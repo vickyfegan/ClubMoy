@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Authentication.Registration">
+        <activity android:name=".Payments.Paypal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,9 +46,10 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Payments.Paypal" />
+        <activity android:name=".Authentication.Registration" />
         <activity android:name=".Payments.PaymentDetails" />
-        <activity android:name=".Sponsors"></activity>
+        <activity android:name=".Sponsors" />
+        <activity android:name=".Logout"></activity>
     </application>
 
 </manifest>

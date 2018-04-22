@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.declan.clubmoy.Homepage;
+import com.example.declan.clubmoy.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.SaveData;
@@ -121,13 +122,13 @@ public class BookingFacilities extends AppCompatActivity {
                 startActivity(i);
             }
         });
-       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+        logoutToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BookingFacilities.this, Logout.class);
                 startActivity(i);
             }
-        });*/
+        });
 
 
     }

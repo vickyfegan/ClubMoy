@@ -79,13 +79,13 @@ public class Homepage extends AppCompatActivity {
             }
         });*/
 
-        /*logoutImage.setOnClickListener(new View.OnClickListener() {
+        logoutImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Homepage.this, Logout.class);
                 startActivity(i);
             }
-        });*/
+        });
 
 
         int images[] = {R.drawable.carrickmore, R.drawable.parhall, R.drawable.crokepark, R.drawable.gaeltacht, R.drawable.semifinal, R.drawable.tyrone};

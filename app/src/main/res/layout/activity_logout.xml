@@ -4,35 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Payments.PaymentDetails">
+    android:background="#FFFFFF"
+    tools:context=".Logout">
 
-
-    <TextView
-        android:id="@+id/txtId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
-        android:text="@string/txtId" />
-
-    <TextView
-        android:id="@+id/txtAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
-        android:text="@string/textAmount" />
-
-    <TextView
-        android:id="@+id/txtStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="203dp"
-        android:text="@string/txtStatus" />
     <android.support.v7.widget.Toolbar
         android:id="@+id/bookingToolbar"
         android:layout_width="match_parent"
@@ -128,13 +102,23 @@
         app:srcCompat="@drawable/calendar" />
 
     <TextView
-        android:id="@+id/paymentDetailsTitle"
+        android:id="@+id/logoutTitle"
         android:layout_width="wrap_content"
         android:textSize="35sp"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bookingToolbar"
         android:layout_centerHorizontal="true"
-        android:text="@string/payment_details" />
+        android:text="Logout" />
+
+    <ImageView
+        android:id="@+id/logoutLogout"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="114dp"
+        android:contentDescription="logoutButton"
+        app:srcCompat="@drawable/logout" />
 
 </RelativeLayout>

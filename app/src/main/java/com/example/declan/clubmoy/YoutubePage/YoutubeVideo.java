@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.example.declan.clubmoy.Booking.BookingFacilities;
 import com.example.declan.clubmoy.Booking.Calendar;
 import com.example.declan.clubmoy.Homepage;
+import com.example.declan.clubmoy.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;
@@ -116,13 +117,13 @@ public class YoutubeVideo extends YouTubeBaseActivity
                 startActivity(i);
             }
         });
-       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+        logoutToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Youtube.this, Logout.class);
+                Intent i = new Intent(YoutubeVideo.this, Logout.class);
                 startActivity(i);
             }
-        });*/
+        });
 
 
 

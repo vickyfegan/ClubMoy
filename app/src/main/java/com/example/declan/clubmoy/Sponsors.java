@@ -168,13 +168,13 @@ public class Sponsors extends AppCompatActivity {
                 startActivity(i);
             }
         });
-       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+       logoutToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Sponsors.this, Logout.class);
                 startActivity(i);
             }
-        });*/
+        });
 
 
     }

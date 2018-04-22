@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.declan.clubmoy.Homepage;
+import com.example.declan.clubmoy.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;
@@ -89,14 +90,14 @@ public class Calendar extends AppCompatActivity {
                 startActivity(i);
             }
         });
-       /* logoutToolbar.setOnClickListener(new View.OnClickListener() {
+       logoutToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Calendar.this, Logout.class);
                 startActivity(i);
             }
-        });*/
-       
+        });
+
 
 
     }

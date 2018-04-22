@@ -27,7 +27,7 @@
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/payNow"
+        android:id="@+id/btnPayNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -134,8 +134,10 @@
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="-99dp"
+        android:layout_marginLeft="99dp"
         android:layout_marginTop="113dp"
         android:layout_toEndOf="@+id/footballToolbar"
+        android:layout_toRightOf="@+id/footballToolbar"
         app:srcCompat="@drawable/crest"
         android:contentDescription="@string/todo12" />
 
@@ -155,6 +157,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/moneyImage"
+        android:layout_alignLeft="@+id/moneyImage"
         android:layout_marginTop="123dp"
         android:text="@string/please_use_the_below_form_to_pay_your_membership_for_2018_the_amount_is_25_00" />
 </RelativeLayout>
