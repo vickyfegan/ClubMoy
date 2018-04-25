@@ -1,34 +1,29 @@
-package com.example.declan.clubmoy.Payments;
+package com.example.declan.clubmoy.Booking;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.declan.clubmoy.Booking.BookingFacilities;
-import com.example.declan.clubmoy.Booking.Calendar;
 import com.example.declan.clubmoy.Homepage;
 import com.example.declan.clubmoy.Logout;
+import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;
 import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-public class PaymentDetails extends AppCompatActivity {
-
-    TextView txtId, txtAmount, txtStatus;
+public class ShowFacilities extends AppCompatActivity {
 
     ImageView homePage, moneyImage, bookingFacImage, sponsorToolbar, youtubeToolbar, footballToolbar, calendarToolbar, logoutToolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_details);
+        setContentView(R.layout.activity_show_facilities);
+
         homePage = (ImageView) findViewById(R.id.homePage);
         moneyImage = (ImageView) findViewById(R.id.moneyImage);
         bookingFacImage = (ImageView) findViewById(R.id.bookingFacImage);
@@ -38,10 +33,11 @@ public class PaymentDetails extends AppCompatActivity {
         calendarToolbar = (ImageView) findViewById(R.id.calendarToolbar);
         logoutToolbar = (ImageView) findViewById(R.id.logoutToolbar);
 
+
         homePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, Homepage.class);
+                Intent i = new Intent(ShowFacilities.this, Homepage.class);
                 startActivity(i);
             }
         });
@@ -49,14 +45,14 @@ public class PaymentDetails extends AppCompatActivity {
         moneyImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, Paypal.class);
+                Intent i = new Intent(ShowFacilities.this, Paypal.class);
                 startActivity(i);
             }
         });
         bookingFacImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, BookingFacilities.class);
+                Intent i = new Intent(ShowFacilities.this, BookingFacilities.class);
                 startActivity(i);
             }
         });
@@ -64,7 +60,7 @@ public class PaymentDetails extends AppCompatActivity {
         sponsorToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, Sponsors.class);
+                Intent i = new Intent(ShowFacilities.this, Sponsors.class);
                 startActivity(i);
             }
         });
@@ -72,60 +68,31 @@ public class PaymentDetails extends AppCompatActivity {
         youtubeToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, YoutubeVideo.class);
+                Intent i = new Intent(ShowFacilities.this, YoutubeVideo.class);
                 startActivity(i);
             }
         });
        footballToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, Training.class);
+                Intent i = new Intent(ShowFacilities.this, Training.class);
                 startActivity(i);
             }
         });
         calendarToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, Calendar.class);
+                Intent i = new Intent(ShowFacilities.this, Calendar.class);
                 startActivity(i);
             }
         });
         logoutToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaymentDetails.this, Logout.class);
+                Intent i = new Intent(ShowFacilities.this, Logout.class);
                 startActivity(i);
             }
         });
 
-
-        txtId = (TextView)findViewById(R.id.txtId);
-        txtAmount = (TextView)findViewById(R.id.txtAmount);
-        txtStatus = (TextView)findViewById(R.id.txtStatus);
-
-        //Get intent
-        Intent intent = getIntent();
-
-        try{
-            JSONObject jsonObject = new JSONObject(intent.getStringExtra("Payment Details"));
-            showDetails(jsonObject.getJSONObject("response"),intent.getStringExtra("PaymentAmount"));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-
-    }
-
-    private void showDetails(JSONObject response, String paymentAmount) {
-
-        try {
-            txtId.setText(response.getString("id"));
-            txtAmount.setText(response.getString(String.format("£"+paymentAmount)));
-            txtStatus.setText(response.getString("state"));
-
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 }

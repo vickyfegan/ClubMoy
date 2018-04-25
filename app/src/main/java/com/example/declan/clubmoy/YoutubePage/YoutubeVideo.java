@@ -13,6 +13,7 @@ import com.example.declan.clubmoy.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;
+import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -103,13 +104,13 @@ public class YoutubeVideo extends YouTubeBaseActivity
                 startActivity(i);
             }
         });
-       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+       footballToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Youtube.this, Training.class);
+                Intent i = new Intent(YoutubeVideo.this, Training.class);
                 startActivity(i);
             }
-        });*/
+        });
         calendarToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

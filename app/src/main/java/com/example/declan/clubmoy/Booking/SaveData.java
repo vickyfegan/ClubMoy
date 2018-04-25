@@ -1,9 +1,8 @@
-package com.example.declan.clubmoy;
+package com.example.declan.clubmoy.Booking;
 
 //https://www.youtube.com/watch?v=aCDgP2By1J0
 
 public class SaveData {
-
     String fName, fDate, fTime, facOptions;
 
     public SaveData(String fName, String fDate, String fTime, String facOptions) {
@@ -44,4 +43,5 @@ public class SaveData {
     public void setFacOptions(String facOptions) {
         this.facOptions = facOptions;
     }
+
 }

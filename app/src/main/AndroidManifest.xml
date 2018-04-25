@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Payments.Paypal">
+        <activity android:name=".SplashPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,10 +31,9 @@
         </service>
 
         <activity android:name=".Homepage" />
-        <activity android:name=".Authentication.Login" />
+        <activity android:name=".Payments.Paypal" />
         <activity android:name=".Booking.Calendar" />
         <activity android:name=".YoutubePage.YoutubeVideo" />
-        <activity android:name=".FirebaseSearchFacilities" />
         <activity android:name=".Booking.BookingFacilities" />
 
         <service
@@ -49,7 +48,11 @@
         <activity android:name=".Authentication.Registration" />
         <activity android:name=".Payments.PaymentDetails" />
         <activity android:name=".Sponsors" />
-        <activity android:name=".Logout"></activity>
+        <activity android:name=".Logout" />
+        <activity android:name=".Booking.ShowFacilities" />
+        <activity android:name=".Match_Training_Info.Training" />
+        <activity android:name=".Match_Training_Info.Fixtures" />
+        <activity android:name=".Authentication.Login"></activity>
     </application>
 
 </manifest>

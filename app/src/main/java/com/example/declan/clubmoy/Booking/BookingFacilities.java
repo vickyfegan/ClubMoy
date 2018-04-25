@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,8 +15,8 @@ import com.example.declan.clubmoy.Homepage;
 import com.example.declan.clubmoy.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
-import com.example.declan.clubmoy.SaveData;
 import com.example.declan.clubmoy.Sponsors;
+import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -108,13 +107,13 @@ public class BookingFacilities extends AppCompatActivity {
                 startActivity(i);
             }
         });
-       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+       footballToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(BookingFacilities.this, Training.class);
                 startActivity(i);
             }
-        });*/
+        });
         calendarToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

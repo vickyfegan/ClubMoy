@@ -5,58 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Booking.BookingFacilities">
-
-    <EditText
-        android:id="@+id/fName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="203dp"
-        android:ems="10"
-        android:hint="@string/facilitiesName"
-        android:inputType="textPersonName" />
-
-    <Spinner
-        android:id="@+id/facOptions"
-        android:layout_width="213dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="224dp"
-        android:entries="@array/facilitiesOptions" />
-
-    <EditText
-        android:id="@+id/fDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="163dp"
-        android:ems="10"
-        android:hint="@string/dd_mm_yyyy"
-        android:inputType="date" />
-
-    <EditText
-        android:id="@+id/fTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="101dp"
-        android:ems="10"
-        android:hint="@string/hh_mm"
-        android:inputType="" />
-
-    <Button
-        android:id="@+id/bookFac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp"
-        android:text="@string/bookFacilities" />
+    tools:context=".Booking.ShowFacilities">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/bookingToolbar"
@@ -150,33 +99,13 @@
         app:srcCompat="@drawable/calendar" />
 
     <TextView
-        android:id="@+id/facTitle"
+        android:id="@+id/showFacTitle"
         android:layout_width="wrap_content"
         android:textSize="35sp"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bookingToolbar"
         android:layout_centerHorizontal="true"
-        android:text="Book Club Facilities" />
-
-    <ImageView
-        android:id="@+id/facCrestImage"
-        android:layout_width="75dp"
-        android:layout_height="100dp"
-        android:layout_above="@+id/fName"
-        android:layout_marginBottom="-203dp"
-        android:layout_marginStart="-99dp"
-        android:layout_toEndOf="@+id/footballToolbar"
-        app:srcCompat="@drawable/crest" />
-
-    <TextView
-        android:id="@+id/facInfo"
-        android:layout_width="238dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/fName"
-        android:layout_below="@+id/facTitle"
-        android:layout_marginStart="-45dp"
-        android:text="Please book your club Facilities using the club form. Training for teams have already being scheduled. Only book individual activities. Facilities are only booked for an hour" />
-
+        android:text="Club Facility Bookings" />
 
 </RelativeLayout>

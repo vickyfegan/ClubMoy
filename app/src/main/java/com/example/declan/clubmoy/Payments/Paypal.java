@@ -2,7 +2,6 @@ package com.example.declan.clubmoy.Payments;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.tv.TvContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +16,7 @@ import com.example.declan.clubmoy.Homepage;
 import com.example.declan.clubmoy.Logout;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;
+import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
@@ -117,13 +117,13 @@ public class Paypal extends AppCompatActivity {
                 startActivity(i);
             }
         });
-       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+       footballToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Paypal.this, Training.class);
                 startActivity(i);
             }
-        });*/
+        });
         calendarToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,10 +163,10 @@ public class Paypal extends AppCompatActivity {
                 if(confirmation != null)
                 {
                     try{
-                        String paymentDetails = confirmation.toJSONObject().toString(4);
+                        String PaymentDetails = confirmation.toJSONObject().toString(4);
 
                         startActivity(new Intent(this, PaymentDetails.class)
-                                .putExtra("PaymentDetails",paymentDetails)
+                                .putExtra("PaymentDetails",PaymentDetails)
                                 .putExtra("PaymentAmount",amount)
                         );
 

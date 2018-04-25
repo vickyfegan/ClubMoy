@@ -23,8 +23,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="187dp"
         android:ems="10"
-        android:hint="@string/enter_amount_00_00"
-        android:inputType="textPersonName" />
+        android:hint="@string/_25_00"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:text="@string/_25_00" />
 
     <Button
         android:id="@+id/btnPayNow"
@@ -41,9 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#fdfdfd"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:background="#fdfdfd" />
 
     <ImageView
         android:id="@+id/homePage"

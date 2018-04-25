@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.example.declan.clubmoy.Booking.BookingFacilities;
 import com.example.declan.clubmoy.Booking.Calendar;
+import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 
@@ -154,13 +155,13 @@ public class Sponsors extends AppCompatActivity {
                 startActivity(i);
             }
         });
-       /* footballToolbar.setOnClickListener(new View.OnClickListener() {
+       footballToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Sponsors.this, Training.class);
                 startActivity(i);
             }
-        });*/
+        });
         calendarToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
