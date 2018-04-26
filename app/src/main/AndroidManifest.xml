@@ -51,8 +51,9 @@
         <activity android:name=".Logout" />
         <activity android:name=".Booking.ShowFacilities" />
         <activity android:name=".Match_Training_Info.Training" />
-        <activity android:name=".Match_Training_Info.Fixtures" />
-        <activity android:name=".Authentication.Login"></activity>
+        <activity android:name=".Authentication.Login" />
+        <activity android:name=".Booking.showClubFac" />
+        <activity android:name=".Match_Training_Info.Match_Fixtures"></activity>
     </application>
 
 </manifest>

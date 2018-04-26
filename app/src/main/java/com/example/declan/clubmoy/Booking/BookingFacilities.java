@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,7 @@ public class BookingFacilities extends AppCompatActivity {
 
     private EditText fName, fDate, fTime;
     private Spinner facOptions;
-    private Button bookFac;
+    private Button bookFac, clubFacBtn;
     private ProgressDialog progressDialog;
 
     DatabaseReference databaseReference;
@@ -45,6 +46,15 @@ public class BookingFacilities extends AppCompatActivity {
         fTime = (EditText) findViewById(R.id.fTime);
         facOptions = (Spinner) findViewById(R.id.facOptions);
         bookFac = (Button) findViewById(R.id.bookFac);
+        clubFacBtn = (Button) findViewById(R.id.clubFacBtn);
+
+        clubFacBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(BookingFacilities.this, showClubFac.class);
+                startActivity(i);
+            }
+        });
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Saving your Booking...");
@@ -130,6 +140,7 @@ public class BookingFacilities extends AppCompatActivity {
         });
 
 
+
     }
 
     public void AddData()
@@ -147,6 +158,23 @@ public class BookingFacilities extends AppCompatActivity {
         databaseReference.push().setValue(saveData);
         progressDialog.dismiss();
         Toast.makeText(getApplication(), "Booking Confirmed", Toast.LENGTH_LONG).show();
+
+        if(TextUtils.isEmpty(Name))
+        {
+            Toast.makeText(this, "Name field is empty", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Date))
+        {
+            Toast.makeText(this, "Date field is empty", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Time))
+        {
+            Toast.makeText(this, "Password field is empty", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
     }
 
 

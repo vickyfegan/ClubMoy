@@ -64,6 +64,12 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "Password field is empty", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        if (password.length() < 6) {
+            Toast.makeText(getApplicationContext(), "Password too short. Password must be more than 6 characters", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         progressDialog.setMessage("Registering User");
         progressDialog.show();
 

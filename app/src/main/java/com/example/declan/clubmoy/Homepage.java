@@ -9,7 +9,7 @@ import android.widget.ViewFlipper;
 
 import com.example.declan.clubmoy.Booking.BookingFacilities;
 import com.example.declan.clubmoy.Booking.Calendar;
-import com.example.declan.clubmoy.Match_Training_Info.Fixtures;
+import com.example.declan.clubmoy.Match_Training_Info.Match_Fixtures;
 import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
@@ -17,7 +17,7 @@ import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
 public class Homepage extends AppCompatActivity {
 
     ViewFlipper v_flipper;
-    ImageView bookingImage, moneyImage, calendarImage, football, logoutImage, youtubeImage, sponsorImage;
+    ImageView bookingImage, moneyImage, calendarImage, football, logoutHp, youtubeImage, sponsorImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class Homepage extends AppCompatActivity {
         moneyImage = (ImageView)findViewById(R.id.moneyImage);
         calendarImage = (ImageView)findViewById(R.id.calendarImage);
         football = (ImageView)findViewById(R.id.football);
-        logoutImage = (ImageView)findViewById(R.id.logoutImage);
+        logoutHp = (ImageView)findViewById(R.id.logoutHp);
         youtubeImage = (ImageView)findViewById(R.id.youtubeImage);
         sponsorImage = (ImageView)findViewById(R.id.sponsorImage);
 
@@ -75,12 +75,12 @@ public class Homepage extends AppCompatActivity {
        football.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Homepage.this, Training.class);
+                Intent i = new Intent(Homepage.this, Match_Fixtures.class);
                 startActivity(i);
             }
         });
 
-        logoutImage.setOnClickListener(new View.OnClickListener() {
+        logoutHp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Homepage.this, Logout.class);

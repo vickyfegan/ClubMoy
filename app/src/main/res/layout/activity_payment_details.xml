@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Payments.PaymentDetails">
 
 
@@ -14,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="139dp"
-        android:text="@string/txtId" />
+        android:text="Payment ID" />
 
     <TextView
         android:id="@+id/txtAmount"
@@ -23,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="170dp"
-        android:text="@string/textAmount" />
+        android:text="£25.00" />
 
     <TextView
         android:id="@+id/txtStatus"
@@ -32,7 +33,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="203dp"
-        android:text="@string/txtStatus" />
+        android:text="Paid" />
     <android.support.v7.widget.Toolbar
         android:id="@+id/bookingToolbar"
         android:layout_width="match_parent"
@@ -41,8 +42,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#fdfdfd"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+       />
 
     <ImageView
         android:id="@+id/homePage"

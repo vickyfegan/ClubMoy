@@ -17,12 +17,27 @@ import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 
 public class Training extends AppCompatActivity {
 
+    //https://stackoverflow.com/questions/45339472/how-to-get-all-childs-data-on-listview-firebase-database
+
     ImageView homePage, moneyImage, bookingFacImage, sponsorToolbar, youtubeToolbar, footballToolbar, calendarToolbar, logoutToolbar;
     ImageView matchFixturesFootball;
+
+    ListView listView;
+    ArrayList<String> training = new ArrayList<>();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference = database.getReference("Training");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +55,11 @@ public class Training extends AppCompatActivity {
         logoutToolbar = (ImageView) findViewById(R.id.logoutToolbar);
         matchFixturesFootball = (ImageView) findViewById(R.id.matchFixturesFootball);
 
+
         matchFixturesFootball.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Training.this, Fixtures.class);
+                Intent i = new Intent(Training.this, Match_Fixtures.class);
                 startActivity(i);
             }
         });
@@ -109,8 +125,45 @@ public class Training extends AppCompatActivity {
             }
         });
 
+        listView = (ListView) findViewById(R.id.trainingListView);
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,training);
+        listView.setAdapter(arrayAdapter);
 
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                for(DataSnapshot childSnapshot: dataSnapshot.getChildren())
+                {
+                    String value = childSnapshot.getValue(String.class);
+                    training.add(value);
+                }
+                arrayAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
-
-
 }
+
+
+
