@@ -48,7 +48,7 @@
         <activity android:name=".Authentication.Registration" />
         <activity android:name=".Payments.PaymentDetails" />
         <activity android:name=".Sponsors" />
-        <activity android:name=".Logout" />
+        <activity android:name=".Authentication.Logout" />
         <activity android:name=".Booking.ShowFacilities" />
         <activity android:name=".Match_Training_Info.Training" />
         <activity android:name=".Authentication.Login" />

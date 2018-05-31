@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.example.declan.clubmoy.Authentication.Logout;
 import com.example.declan.clubmoy.Booking.BookingFacilities;
 import com.example.declan.clubmoy.Booking.Calendar;
-import com.example.declan.clubmoy.Match_Training_Info.Match_Fixtures;
 import com.example.declan.clubmoy.Match_Training_Info.Training;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.YoutubePage.YoutubeVideo;
@@ -75,7 +75,7 @@ public class Homepage extends AppCompatActivity {
        football.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Homepage.this, Match_Fixtures.class);
+                Intent i = new Intent(Homepage.this, Training.class);
                 startActivity(i);
             }
         });

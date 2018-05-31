@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.declan.clubmoy.Homepage;
-import com.example.declan.clubmoy.Logout;
+import com.example.declan.clubmoy.Authentication.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;

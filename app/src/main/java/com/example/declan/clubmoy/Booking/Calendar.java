@@ -1,6 +1,5 @@
 package com.example.declan.clubmoy.Booking;
 
-import android.app.usage.UsageEvents;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.declan.clubmoy.Homepage;
-import com.example.declan.clubmoy.Logout;
+import com.example.declan.clubmoy.Authentication.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;

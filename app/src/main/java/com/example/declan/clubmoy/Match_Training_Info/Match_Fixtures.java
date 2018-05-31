@@ -11,7 +11,7 @@ import android.widget.ListView;
 import com.example.declan.clubmoy.Booking.BookingFacilities;
 import com.example.declan.clubmoy.Booking.Calendar;
 import com.example.declan.clubmoy.Homepage;
-import com.example.declan.clubmoy.Logout;
+import com.example.declan.clubmoy.Authentication.Logout;
 import com.example.declan.clubmoy.Payments.Paypal;
 import com.example.declan.clubmoy.R;
 import com.example.declan.clubmoy.Sponsors;

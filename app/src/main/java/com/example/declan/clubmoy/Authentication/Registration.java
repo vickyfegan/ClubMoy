@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener{
 
+    //https://www.youtube.com/watch?v=tJVBXCNtUuk
+
     private Button register;
     private EditText registerEmail;
     private EditText registerPassword;
